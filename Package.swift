@@ -19,11 +19,11 @@ import PackageDescription
 let package = Package(
   name: "GoogleMapsUtils",
   products: [
-    .library(name: "GoogleMapsUtils", targets: ["GoogleMapsUtilsObjC"])
+    .library(name: "GoogleMapsUtils", targets: ["GoogleMapsUtils"])
   ],
   targets: [
     .target(
-      name: "GoogleMapsUtilsObjC",
+      name: "GoogleMapsUtils",
       dependencies: [],
       path: "src/ObjC"
     )
