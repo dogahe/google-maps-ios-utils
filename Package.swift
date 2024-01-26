@@ -21,9 +21,17 @@ let package = Package(
   products: [
     .library(name: "GoogleMapsUtils", targets: ["GoogleMapsUtils"])
   ],
+  dependencies: [
+    .package(url: "https://github.com/googlestaging/ios-maps-sdk", .exact("8.3.1")),
+  ],
   targets: [
     .target(
-      name: "GoogleMapsUtils"
+      name: "GoogleMapsUtils",
+      dependencies: [
+              .product(name: "GoogleMaps", package: "ios-maps-sdk"),
+              .product(name: "GoogleMapsCore", package: "ios-maps-sdk"),
+              .product(name: "GoogleMapsBase", package: "ios-maps-sdk")
+      ]
     )
   ]
 )
