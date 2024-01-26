@@ -31,7 +31,8 @@ let package = Package(
               .product(name: "GoogleMaps", package: "ios-maps-sdk"),
               .product(name: "GoogleMapsCore", package: "ios-maps-sdk"),
               .product(name: "GoogleMapsBase", package: "ios-maps-sdk")
-      ]
+      ],
+      publicHeadersPath: "include"
     )
   ]
 )
