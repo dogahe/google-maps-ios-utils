@@ -23,7 +23,7 @@ let package = Package(
     .library(name: "GoogleMapsUtils", targets: ["GoogleMapsUtils", "GoogleMapsUtilsSwift"])
   ],
   dependencies: [
-    .package(url: "https://github.com/googlestaging/ios-maps-sdk", .exact("8.3.1")),
+    .package(url: "https://github.com/googlemaps/ios-maps-sdk", .exact("8.3.1")),
   ],
   targets: [
     .target(
