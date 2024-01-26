@@ -29,18 +29,19 @@ let package = Package(
     .target(
       name: "GoogleMapsUtils",
       dependencies: [
-              .product(name: "GoogleMaps", package: "ios-maps-sdk"),
-              .product(name: "GoogleMapsCore", package: "ios-maps-sdk"),
-              .product(name: "GoogleMapsBase", package: "ios-maps-sdk")
+        .product(name: "GoogleMaps", package: "ios-maps-sdk"),
+        .product(name: "GoogleMapsCore", package: "ios-maps-sdk"),
+        .product(name: "GoogleMapsBase", package: "ios-maps-sdk")
       ],
       publicHeadersPath: "include"
     ),
     .target(
       name: "GoogleMapsUtilsSwift",
       dependencies: [
-              .product(name: "GoogleMaps", package: "ios-maps-sdk"),
-              .product(name: "GoogleMapsCore", package: "ios-maps-sdk"),
-              .product(name: "GoogleMapsBase", package: "ios-maps-sdk")
+        "GoogleMapsUtils",
+        .product(name: "GoogleMaps", package: "ios-maps-sdk"),
+        .product(name: "GoogleMapsCore", package: "ios-maps-sdk"),
+        .product(name: "GoogleMapsBase", package: "ios-maps-sdk")
       ]
     )
   ]
