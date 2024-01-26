@@ -23,9 +23,7 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "GoogleMapsUtils",
-      dependencies: [],
-      path: "src/ObjC"
+      name: "GoogleMapsUtils"
     )
   ]
 )
