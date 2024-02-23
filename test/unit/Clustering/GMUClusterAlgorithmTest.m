@@ -27,9 +27,6 @@ const static CLLocationCoordinate2D kLocation2 = {-1, 1};
 const static CLLocationCoordinate2D kLocation3 = {1, 1};
 const static CLLocationCoordinate2D kLocation4 = {1, -1};
 
-// Returns a random value from 0-1.0.
-static double randd() { return (((double)arc4random() / 0x100000000) * 1.0); }
-
 @implementation GMUClusterAlgorithmTest
 
 - (id<GMUClusterItem>)itemAtLocation:(CLLocationCoordinate2D)location {
@@ -45,8 +42,8 @@ static double randd() { return (((double)arc4random() / 0x100000000) * 1.0); }
   GMSMapPoint mapPoint = GMSProject(location);
   NSMutableArray<id<GMUClusterItem>> *items = [[NSMutableArray<id<GMUClusterItem>> alloc] init];
   while (count-- > 0) {
-    GMSMapPoint nearMapPoint = {mapPoint.x + randd() * worldUnits,
-                                mapPoint.y + randd() * worldUnits};
+    GMSMapPoint nearMapPoint = {mapPoint.x + (((double)arc4random() / 0x100000000) * 1.0) * worldUnits,
+                                mapPoint.y + (((double)arc4random() / 0x100000000) * 1.0) * worldUnits};
     CLLocationCoordinate2D nearLocation = GMSUnproject(nearMapPoint);
     [items addObject:[[GMUTestClusterItem alloc] initWithPosition:nearLocation]];
   }
