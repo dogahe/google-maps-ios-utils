@@ -24,15 +24,6 @@ Pod::Spec.new do |s|
   s.dependency 'GoogleMaps', '= 8.4.0'
   s.static_framework = true
 
-  s.subspec 'QuadTree' do |sp|
-    sp.public_header_files = "Sources/GoogleMapsUtils/QuadTree/include/*.h"
-    sp.source_files = "Sources/GoogleMapsUtils/QuadTree/*.m"
-  end
-
-  s.subspec 'Clustering' do |sp|
-    sp.public_header_files = "Sources/GoogleMapsUtils/Clustering/include/*.h"
-    sp.source_files = "Sources/GoogleMapsUtils/Clustering/*.m"
-    sp.exclude_files = "src/#{sp.base_name}/GMUMarkerClustering.h"
-    sp.dependency 'Google-Maps-iOS-Utils/QuadTree'
-  end
+  s.public_header_files = "Sources/GoogleMapsUtils/include/*.h"
+  s.source_files = "Sources/GoogleMapsUtils/*.m"
 end
