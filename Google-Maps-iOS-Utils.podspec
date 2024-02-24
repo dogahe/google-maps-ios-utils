@@ -27,5 +27,3 @@ Pod::Spec.new do |s|
   s.public_header_files = "Sources/GoogleMapsUtils/include/*.h"
   s.source_files = "Sources/GoogleMapsUtils/*.{h,m}", "Sources/GoogleMapsUtilsSwift/*.swift"
 end
-
-"Sources/GoogleMapsUtils/include/*.{h,m}", "Sources/GoogleMapsUtilsSwift/#{sp.base_name}/**/*.swift"
