@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'Apache 2.0', :file => 'LICENSE' }
   s.authors      = "Google Inc."
   s.platform     = :ios, '14.0'
-  s.source       = { :git => "https://github.com/dogahe/google-maps-ios-utils",
+  s.source       = { :git => "https://github.com/dogahe/google-maps-ios-utils.git",
                      :branch => "updateMain" }
   s.requires_arc = true
   s.module_name = "GoogleMapsUtils"
