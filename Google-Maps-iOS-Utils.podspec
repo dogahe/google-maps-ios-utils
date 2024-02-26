@@ -26,19 +26,4 @@ Pod::Spec.new do |s|
 
   s.public_header_files = "Sources/GoogleMapsUtils/include/*.h"
   s.source_files = "Sources/GoogleMapsUtils/*.m", "Sources/GoogleMapsUtils/include/*.h", "Sources/GoogleMapsUtilsSwift/*.swift"
-
-  s.test_spec 'Tests' do |unit_tests|
-    unit_tests.source_files = [
-      "GoogleMapsUtils/GoogleMapsUtils.h",
-      "test/common/Model/*.{h,m,swift}",
-      "test/unit/**/*.{h,m,swift}",
-    ]
-    unit_tests.resources = [
-      "test/resources/**/*.{geojson,kml}"
-    ]
-    unit_tests.pod_target_xcconfig = {
-      'SWIFT_OBJC_BRIDGING_HEADER' => "$(PODS_TARGET_SRCROOT)/test/unit/BridgingHeader/UnitTest-Bridging-Header.h"
-    }
-    unit_tests.dependency 'OCMock'
-  end
 end
